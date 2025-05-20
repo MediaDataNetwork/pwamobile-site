@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PWAMobile builds fast, installable, offline-ready Progressive Web Apps for every industry.">
+  <link rel="manifest" href="/manifest.json">
+  <title>PWAMobile – Affordable Progressive Web Apps</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <header class="bg-blue-900 text-white w-full px-4 py-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">PWAMobile</h1>
+    <nav class="space-x-4">
+      <a href="#features" class="hover:text-yellow-400">Features</a>
+      <a href="#industries" class="hover:text-yellow-400">Industries</a>
+      <a href="#testimonials" class="hover:text-yellow-400">Testimonials</a>
+      <a href="#contact" class="bg-yellow-400 text-black px-3 py-2 rounded">Get Started</a>
+    </nav>
+  </header>
+
+  <section class="bg-gray-100 text-center py-20 w-full px-4">
+    <h2 class="text-4xl font-bold mb-4">The Future of Mobile is Here</h2>
+    <p class="text-xl mb-6">Build blazing-fast, installable, offline-ready web apps with PWAMobile – no app stores required.</p>
+    <a href="#contact" class="bg-blue-700 text-white px-6 py-3 rounded hover:bg-blue-800 transition">Launch Your PWA Today</a>
+  </section>
+
+  <section id="features" class="py-16 px-4 bg-white text-center">
+    <h3 class="text-3xl font-bold mb-8">Why Choose PWAMobile?</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full px-4">
+      <div><h4 class="text-xl font-semibold mb-2">🚀 Fast & Responsive</h4><p>Lightning-fast load times for superior user experience.</p></div>
+      <div><h4 class="text-xl font-semibold mb-2">📴 Offline-Ready</h4><p>Runs even without internet. Service workers keep your users connected.</p></div>
+      <div><h4 class="text-xl font-semibold mb-2">📲 Installable</h4><p>One tap to install on any device — no app store approval needed.</p></div>
+    </div>
+  </section>
+
+  <section id="industries" class="bg-gray-50 py-16 px-4 text-center">
+    <h3 class="text-3xl font-bold mb-8">Industries We Serve</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full px-4 text-left">
+      <div><strong>Healthcare</strong><p class="text-sm">Telehealth portals, appointment scheduling, and patient support tools.</p></div>
+      <div><strong>E-Commerce</strong><p class="text-sm">Sell products directly via a mobile-friendly, offline-capable storefront.</p></div>
+      <div><strong>Education</strong><p class="text-sm">E-learning apps with push notifications and content downloads.</p></div>
+      <div><strong>Finance</strong><p class="text-sm">Banking, budgeting, and secure client portals on any device.</p></div>
+      <div><strong>Media</strong><p class="text-sm">Streaming apps, content subscriptions, and interactive publishing.</p></div>
+      <div><strong>Local Services</strong><p class="text-sm">Booking apps for restaurants, salons, gyms, and more.</p></div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="py-16 bg-white text-center px-4">
+    <h3 class="text-3xl font-bold mb-10">What Our Clients Say</h3>
+    <div class="space-y-6 w-full px-4">
+      <blockquote class="bg-gray-100 p-6 rounded shadow">
+        “PWAMobile built us a beautiful app for our veterinary clinic — and it works offline too! Our clients love it.”  
+        <span class="block mt-2 font-bold">– Dr. Jane Carter, HappyPaws Vet</span>
+      </blockquote>
+      <blockquote class="bg-gray-100 p-6 rounded shadow">
+        “Our event app was ready in days. We skipped the App Store and our attendees were impressed.”  
+        <span class="block mt-2 font-bold">– Kyle Thompson, Festival Organizer</span>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-blue-800 text-white py-16 text-center w-full px-4">
+    <h3 class="text-3xl font-bold mb-4">Ready to Build Your PWA?</h3>
+    <p class="mb-6">Let's create a web app your users will love. Fast, affordable, and scalable.</p>
+    <a href="mailto:info@pwamobile.com" class="bg-yellow-400 text-black px-6 py-3 rounded font-semibold">Contact Us Today</a>
+  </section>
+
+  <footer class="bg-blue-900 text-white py-6 w-full px-4 text-center">
+    <p>&copy; 2025 PWAMobile. All rights reserved. | <a href="#" class="underline">Privacy Policy</a></p>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(function (registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function (err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  </script>
+
+</body>
+</html>
